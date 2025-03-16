@@ -176,6 +176,11 @@ section {
     bottom: 70px;
     left: 0px;
 }
+.works-block img{
+    margin: 0 20px;
+    width: 27%;
+    box-shadow: 7px 7px 0 #000000;
+}
 .comments-block {
     justify-content: space-evenly;
     max-width: 1150px;
