@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
 section {
     background-position: center;
     background-repeat: no-repeat;
@@ -68,10 +73,22 @@ section {
 .button a {
     font-size: 20px;
     text-decoration: none;
+    font-weight: 700;
+    color: #000;
 }
 @keyframes planet-move {
     from{transform: translateY(0px);}
     to{transform: translateY(70px);}
+}
+.planet{
+    background: url(img/planet.png);
+    background-repeat: no-repeat;
+    width: 405px;
+    height: 330px;
+    transform: rotate(-176deg);
+    position: absolute;
+    right: 20px;
+    z-index: 1;
 }
 .moving-planet {
     background: url(images/img/img/moving-planet.png);
@@ -131,7 +148,7 @@ section {
     font-size: 17px;
     align-self: start;
     padding-left: 20px;
-    line-height: 12px;
+    line-height: 25px;
     font-family: 'comfortaa';
 }
 .about-card img{
@@ -149,7 +166,7 @@ section {
 .skills-card{
     background-image: url(images/img/img/form3.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 450px;
     display: flex;
     flex-direction: column;
@@ -214,8 +231,8 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width:327 ;
-    height:161 ;
+    width:327px ;
+    height:161px ;
     display: flex;
     justify-content: center;
     align-items: center;
