@@ -1,6 +1,7 @@
 * {
     margin: 0;
     font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
 }
 
 section {
@@ -30,6 +31,50 @@ section {
     justify-content: center;
     align-items: center;
     min-height: 70vh;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.fixed-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding-right: 150px;
+}
+.nav-link {
+    transition-duration:0.3s ;
+    width: 112px;
+    height: 40px;
+    border-radius: 12px;
+    border: solid 2px black;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'comfortaa';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.nav-link:hover {
+    background-color: #bbff2c;
+    transform: scale(1.2,1.2);
+}
+.logo {
+    color: #bbff2c;
+    font-size: 80px;
+    padding-left: 50px;
+    text-shadow:0px 0px 1 black;
 }
 .main-block {
     flex-direction: column;
@@ -260,4 +305,105 @@ footer {
 }
 .footer-links a{
     margin-right: 15px;
+}
+.active {
+    background-color: #bbff2c;
+}
+@media (max-width: 1000px){
+    .nav-links {
+        display: none;
+    }
+    .logo {
+        font-size: 40px;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .main-content {
+        max-width: 320px;
+    }
+    .main-title {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+    .main-subtitle {
+        font-size: 15px;
+    }
+    .planet, .moving-planet2, .moving-cloud {
+        display: none;
+    }
+    .title {
+        font-size: 50px;
+        padding-top: 30px;
+    }
+    .about-card{
+        order: -1;
+        background-size: contain;
+        padding-top: 20px;
+        width: 326px;
+        height: 296px;
+    }
+    .about-block {
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 0;
+    }
+    .about-card img {
+        width:85% ;
+    }
+    .about-content {
+        width: 75%;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .about-title {
+        font-size: 20px;
+    }
+    .skills-card {
+        margin: 20px;
+        padding-left: 10px;
+        background-size: contain;
+    }
+    .skills-card p {
+        font-size: 16px;
+        margin-top: 15%;
+        margin-bottom: 20px;
+    }
+    .skills {
+        min-height: 60vh;
+    }
+    .skills-card .button {
+        position: absolute;
+        bottom: 100px;
+    }
+    .works-block {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .works-block img {
+        margin: 20px 0;
+        width: 80%;
+    }
+    .comments-block {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+    .comment{
+        background-image: url(images/img/img/comment-mobile.png);
+    }
+    .comment p {
+        font-size: 15px;
+        max-width: 290px;
+    }
+    footer {
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footer-info {
+        text-align: center;
+    }
 }
